@@ -43,6 +43,6 @@ class BroadcastMessage(models.Model):
 	dated = models.DateField()
 
 class SocialMedia(models.Model):
-	username = models.ForiegnKey(User)
+	username = models.ForeignKey(User,on_delete = models.CASCADE)
 	website = models.CharField(max_length = 20)
 	web_id = models.CharField(max_length = 20)
