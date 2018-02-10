@@ -28,3 +28,5 @@ Install django and `psycopg2` library for postgres.
 pip3 install Django==2.0.1
 pip3 install psycopg2
 ```
+
+Test project with `python3 manage.py runserver` and navigate to `http://localhost:8000/user/`.
