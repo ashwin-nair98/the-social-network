@@ -1,8 +1,9 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import login, authenticate
+from django.shortcuts import render, redirect
 
-def index(request):
-	return HttpResponse("This is a work in progress")
+from mysite.core.forms import SignUpForm
+
 
 @login_required
 def home(request):
@@ -22,4 +23,3 @@ def signup(request):
     else:
         form = SignUpForm()
     return render(request, 'signup.html', {'form': form})
-
